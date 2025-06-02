@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
             myTabFragment = new MyTabFragment();
             Bundle data = new Bundle();
             data.putString("tabName", tab.getText().toString());
+            myTabFragment.setArguments(data);
             myTabFragments[tab.getPosition()] = myTabFragment;
         } else {
             myTabFragment = myTabFragments[tab.getPosition()];
